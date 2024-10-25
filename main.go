@@ -1,7 +1,7 @@
 package main
 
 import (
-	"api-gateway/routes"
+	"api-gateway/routers"
 
 	"github.com/gin-gonic/gin"
 )
@@ -9,8 +9,8 @@ import (
 func main() {
 	router := gin.Default()
 
-	routes.AuthRoutes(router)
-	routes.UserRoutes(router)
+	routers.AuthRoutes(router)
+	routers.UserRoutes(router)
 
 	router.Run(":8080")
 }
